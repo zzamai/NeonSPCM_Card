@@ -2,6 +2,9 @@
     --pure: rgb(255,255,255);
     --bg: rgb(14, 0, 0);
     --neon-first: rgb(255, 0, 0);
+    animation: rgbROFL;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
 }
 
 *, *::after, *::before {
@@ -15,80 +18,6 @@ body {
     place-items: center;
     background: var(--bg);
     font-family: "Balsamiq Sans", cursive;
-}
-
-@keyframes shadow {
-    0% {  
-        width: 100%;
-        height: 7%;
-    }
-
-    50% {
-        width: 120%;
-        height: 10%;
-    }
-
-    100% {
-        width: 100%;
-        height: 7%;
-    }
-}
-
-@keyframes upndown {
-    0% {
-        top:30px;
-        transform: rotateY(0deg);
-    }
-
-    25% {
-        transform: rotateY(180deg);
-    }
-
-    50% {
-        top: 100px;
-        transform: rotateY(360deg);
-    }
-
-    75% {
-        transform: rotateY(540deg);
-    }
-
-    100% {
-        top:30px;
-        transform: rotateY(720deg);
-    }
-}
-
-@keyframes vanish {
-
-    0% {
-        color: var(--neon-first);
-        text-shadow: 0px 0px 15px var(--neon-first),
-        0px 0px 1px var(--pure);
-    }
-
-    12.2% {
-        color: var(--bg);
-        text-shadow: none;
-    }
-
-    38% {
-        color: var(--neon-first);
-        text-shadow: 0px 0px 15px var(--neon-first),
-        0px 0px 1px var(--pure);
-    }
-
-    62% {
-        color: var(--bg);
-        text-shadow: none;
-    }
-
-    88% {
-        color: var(--neon-first);
-        text-shadow: 0px 0px 15px var(--neon-first),
-        0px 0px 1px var(--pure);
-    }
-
 }
 
 .outer {
@@ -133,8 +62,188 @@ p {
     background: var(--neon-first);
     transform: perspective(3em) rotateX(50deg); 
     filter: blur(3.5em);
-    animation: shadow linear;
+    animation: shadow ease-out;
     animation-iteration-count: infinite;
     animation-duration: 10s;
 }
 
+/* Animations */
+
+@keyframes shadow {
+    0% {  
+        width: 100%;
+        height: 7%;
+    }
+
+    50% {
+        width: 110%;
+        height: 9%;
+    }
+
+    100% {
+        width: 100%;
+        height: 7%;
+    }
+}
+
+@keyframes upndown {
+    0% {
+        top:30px;
+        transform: rotateY(0deg);
+        transform: rotateZ(-25deg);
+    }
+
+    25% {
+        transform: rotateY(180deg);
+    }
+
+    50% {
+        top: 100px;
+        transform: rotateY(360deg);
+        transform: rotateZ(-25deg);
+    }
+
+    75% {
+        transform: rotateY(540deg);
+    }
+
+    100% {
+        top:30px;
+        transform: rotateY(720deg);
+        transform: rotateZ(-25deg);
+    }
+}
+
+@keyframes vanish {
+
+    0% {
+        color: var(--neon-first);
+        text-shadow: 0px 0px 15px var(--neon-first),
+        0px 0px 1px var(--pure);
+    }
+
+    12.2% {
+        color: var(--bg);
+        text-shadow: none;
+    }
+
+    38% {
+        color: var(--neon-first);
+        text-shadow: 0px 0px 15px var(--neon-first),
+        0px 0px 1px var(--pure);
+    }
+
+    62% {
+        color: var(--bg);
+        text-shadow: none;
+    }
+
+    88% {
+        color: var(--neon-first);
+        text-shadow: 0px 0px 15px var(--neon-first),
+        0px 0px 1px var(--pure);
+    }
+
+}
+
+@keyframes rgbROFL {
+    0% {
+        --neon-first: rgb(255, 0, 0);
+        --bg: rgb(14, 0, 0);
+    }
+
+    5% {
+        --neon-first: rgb(0, 255, 0);
+        --bg: rgb(2, 14, 0);
+    }
+
+    15% {
+        --neon-first: rgb(0, 0, 255);
+        --bg: rgb(0, 0, 14);
+    }
+
+    20% {
+        --neon-first: rgb(255, 0, 0);
+        --bg: rgb(14, 0, 0);
+    }
+
+    25% {
+        --neon-first: rgb(0, 255, 0);
+        --bg: rgb(2, 14, 0);
+    }
+
+    30% {
+        --neon-first: rgb(0, 0, 255);
+        --bg: rgb(0, 0, 14);
+    }
+
+    35% {
+        --neon-first: rgb(255, 0, 0);
+        --bg: rgb(14, 0, 0);
+    }
+
+    40% {
+        --neon-first: rgb(0, 255, 0);
+        --bg: rgb(2, 14, 0);
+    }
+
+    45% {
+        --neon-first: rgb(0, 0, 255);
+        --bg: rgb(0, 0, 14);
+    }
+
+    50% {
+        --neon-first: rgb(255, 0, 0);
+        --bg: rgb(14, 0, 0);
+    }
+
+    55% {
+        --neon-first: rgb(0, 255, 0);
+        --bg: rgb(2, 14, 0);
+    }
+
+    60% {
+        --neon-first: rgb(0, 0, 255);
+        --bg: rgb(0, 0, 14);
+    }
+
+    65% {
+        --neon-first: rgb(255, 0, 0);
+        --bg: rgb(14, 0, 0);
+    }
+
+    70% {
+        --neon-first: rgb(0, 255, 0);
+        --bg: rgb(2, 14, 0);
+    }
+
+    75% {
+        --neon-first: rgb(0, 0, 255);
+        --bg: rgb(0, 0, 14);
+    }
+
+    80% {
+        --neon-first: rgb(255, 0, 0);
+        --bg: rgb(14, 0, 0);
+    }
+
+    85% {
+        --neon-first: rgb(0, 255, 0);
+        --bg: rgb(2, 14, 0);
+    }
+
+    90% {
+        --neon-first: rgb(0, 0, 255);
+        --bg: rgb(0, 0, 14);
+    }
+
+    95% {
+        --neon-first: rgb(255, 0, 0);
+        --bg: rgb(14, 0, 0);
+    }
+
+    100% {
+        --neon-first: rgb(255, 0, 0);
+        --bg: rgb(14, 0, 0);
+    }
+}
