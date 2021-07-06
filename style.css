@@ -1,0 +1,140 @@
+:root {
+    --pure: rgb(255,255,255);
+    --bg: rgb(14, 0, 0);
+    --neon-first: rgb(255, 0, 0);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    font-family: "Balsamiq Sans", cursive;
+}
+
+@keyframes shadow {
+    0% {  
+        width: 100%;
+        height: 7%;
+    }
+
+    50% {
+        width: 120%;
+        height: 10%;
+    }
+
+    100% {
+        width: 100%;
+        height: 7%;
+    }
+}
+
+@keyframes upndown {
+    0% {
+        top:30px;
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(180deg);
+    }
+
+    50% {
+        top: 100px;
+        transform: rotateY(360deg);
+    }
+
+    75% {
+        transform: rotateY(540deg);
+    }
+
+    100% {
+        top:30px;
+        transform: rotateY(720deg);
+    }
+}
+
+@keyframes vanish {
+
+    0% {
+        color: var(--neon-first);
+        text-shadow: 0px 0px 15px var(--neon-first),
+        0px 0px 1px var(--pure);
+    }
+
+    12.2% {
+        color: var(--bg);
+        text-shadow: none;
+    }
+
+    38% {
+        color: var(--neon-first);
+        text-shadow: 0px 0px 15px var(--neon-first),
+        0px 0px 1px var(--pure);
+    }
+
+    62% {
+        color: var(--bg);
+        text-shadow: none;
+    }
+
+    88% {
+        color: var(--neon-first);
+        text-shadow: 0px 0px 15px var(--neon-first),
+        0px 0px 1px var(--pure);
+    }
+
+}
+
+.outer {
+    height: 80vh;
+    width: 20vw;
+    position: relative;
+}
+
+.inner {
+    position: absolute;
+    top: 30px;
+    left: 3rem;
+    width: 15vw;
+    height: 50vh;
+    padding: 12rem 5em;
+    border-radius: 15px;
+    border: 5px solid var(--neon-first);
+    box-shadow: inset 0px 0px 30px var(--neon-first),
+    0px 0px 30px var(--neon-first);
+    animation: upndown linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+p {
+    margin: 0;
+    font-size: 3rem;
+    color: var(--neon-first);
+    text-shadow: 0px 0px 15px var(--neon-first),
+    0px 0px 1px var(--pure);
+    animation: vanish step-end;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+.outer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 7%;
+    top:75%;
+    background: var(--neon-first);
+    transform: perspective(3em) rotateX(50deg); 
+    filter: blur(3.5em);
+    animation: shadow linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
